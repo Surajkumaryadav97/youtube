@@ -70,8 +70,8 @@ const Head=()=>{
              </a>
             </div>
             <div className='col-span-10 px-10'>
-                <div>
-                <input className='w-1/2 border border-gray-400 p-2 rounded-l-full' type="text"
+                <div className=''>
+                <input className='w-1/2 border border-gray-400 p-2 rounded-l-full ' type="text"
                 value={searchQuery}
                 onChange={(e)=>setSearchQuery(e.target.value)}
                 onFocus={()=>setShowSuggestion(true)}
@@ -79,7 +79,7 @@ const Head=()=>{
                 />
                 <button className='border border-gray-400 p-2 rounded-r-full'>search</button>
                 </div>
-                {showSuggestion&&<div className='fixed bg-white py-2 px-5 w-[28rem] shadow-lg rounded-lg border border-gray'>
+                {showSuggestion&&<div className='bg-white py-2  w-[28rem] shadow-lg rounded-lg border border-gray'>
                 <ul>
                     {suggestion.map((s)=>(
                           <li key={s} className='py-2 shadow-sm hover:bg-gray-100'>{s}</li>
